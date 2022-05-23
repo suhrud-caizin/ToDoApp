@@ -1,0 +1,29 @@
+<h1>
+    TODO APP
+  </h1>
+  <div class="container-fluid">
+  
+    <input class="form-control form-control-lg" type="text" placeholder="note name" aria-label=".form-control-lg example"  [(ngModel)]="name">
+    <br>
+    
+    
+    <input class="form-control form-control-lg" type="text" placeholder="write note" aria-label=".form-control-lg example"  [(ngModel)]="desc">
+    
+    <br>
+    <p>Pick a Due Date</p>
+    <input type="date" name="" id="" placeholder="DueDate"  [(ngModel)]="dueDate">
+  <br><br>
+    <button type="button" class="btn btn-primary" (click)="createNote()">Create note
+      
+    </button>
+  </div>
+  <div class="row align-items-start">
+    <div *ngFor='let td of columns'>
+      <div class="col">
+
+        <app-list [columnName]="td"></app-list>
+      </div>
+  
+    </div>
+    </div>
+   

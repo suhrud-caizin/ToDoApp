@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-todos';
+  columns:string[]=['completed','today','tomorrow','queued'];
 }

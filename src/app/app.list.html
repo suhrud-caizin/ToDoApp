@@ -1,0 +1,92 @@
+<!-- <h1>
+  TODO APP
+</h1>
+<div class="container-fluid">
+
+  <input class="form-control form-control-lg" type="text" placeholder="note name" aria-label=".form-control-lg example"  [(ngModel)]="name">
+  <br>
+  
+  
+  <input class="form-control form-control-lg" type="text" placeholder="write note" aria-label=".form-control-lg example"  [(ngModel)]="desc">
+  
+  <br>
+  <p>Pick a Due Date</p>
+  <input type="date" name="" id="" placeholder="DueDate"  [(ngModel)]="dueDate">
+<br><br>
+  <button type="button" class="btn btn-primary" (click)="createNote()">Create note
+    
+  </button>
+</div> -->
+
+<!-- <div class="row align-items-start"> -->
+
+  <div class="col">
+    <h1>
+
+     {{columnName}} Tasks:
+    </h1>
+  <div *ngFor='let td of getList()'>
+    
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><i>{{td.status}}</i></h5>
+        <h5 class="card-title">{{td.dueDate.toDateString()}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{td.name}}</h6>
+           
+                    <p class="card-text">{{td.desc}}</p>
+                    <button type="button" class="btn btn-success" (click)="markDone(td.id)" *ngIf=isIncomplete(td.id)>Mark Done</button>
+                    &nbsp;<button type="button" class="btn btn-danger" (click)="removeNote(td.id)" >Remove</button>
+                
+                  </div>
+                </div>
+  </div>
+</div>
+
+
+<!-- 
+<div class="col">
+  <h1>
+
+    Today due Tasks:
+  </h1>
+  <tr *ngFor='let td of getTodayDueNotes()'>
+    
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{td.dueDate.toDateString()}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{td.name}}</h6>
+     
+                    <p class="card-text">{{td.desc}}</p>
+                    <button type="button" class="btn btn-success" (click)="markDone(td.id)" *ngIf=isIncomplete(td.id)> Mark Done</button>
+                  </div>
+                </div>
+</tr>
+</div>
+
+
+
+<div class="col">
+  <h1>
+
+    tomorrow Tasks:
+  </h1>
+  <tr *ngFor='let td of getTomDueNotes()'>
+    
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{td.dueDate.toDateString()}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{td.name}}</h6>
+        
+        <p class="card-text">{{td.desc}}</p>
+        <button type="button" class="btn btn-success" (click)="markDone(td.id)" *ngIf=isIncomplete(td.id)>Mark Done</button>
+      </div>
+    </div>
+  </tr>
+</div>
+
+
+
+
+
+
+</div> -->
